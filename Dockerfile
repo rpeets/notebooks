@@ -15,5 +15,5 @@ EXPOSE 8888
 CMD [ "jupyter", "--version" ]
 
 # docker image build -f Dockerfile -t jnb .
-# docker container run -d -p 8888:8888 -v $PWD/data:/home --name jnb jnb
+# docker container run -d -p 8888:8888 -v $PWD/notebooks:/home --name jnb jnb
 # docker logs jnb
