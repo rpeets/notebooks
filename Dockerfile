@@ -1,4 +1,4 @@
-FROM python:3.7.5-stretch
+FROM python:3.8.8-slim-buster
 
 RUN apt-get update \
     && apt-get install -y vim sudo \
