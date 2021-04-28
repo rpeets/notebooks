@@ -5,10 +5,12 @@ RUN apt-get update \
     && pip install --upgrade pip \
     && pip install jupyter pandas xlrd openpyxl pymongo \
     && pip install plotly_express dash cufflinks \
-    && pip install requests 
+    && pip install requests \
+    && mkdir -p /root/.jupyter/
 
 # Run service of Jupyter.
 COPY entrypoint.sh /usr/local/bin/
+COPY jupyter_notebook_config.json /root/.jupyter/
 ENTRYPOINT [ "entrypoint.sh" ]
 EXPOSE 8888
 
